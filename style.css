@@ -414,7 +414,7 @@ body {
     background: rgba(0,0,0,0.92);
     border-radius: 22px;
     position: absolute;
-    top: 50%;
+    top: 45%;
     right: 15px;
     transform: translateY(-50%);
     box-shadow: 0 10px 30px rgba(0,0,0,0.5);
@@ -700,4 +700,282 @@ button a {
     height: auto;
     object-fit: contain;
     margin-top: 100px;
+}
+
+/* ==========================================
+   CONTROLE DAS TELAS PELO JAVASCRIPT
+   ========================================== */
+
+.tela {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.tela.ativa {
+    display: block;
+}
+
+.checkbox-pasta {
+    width: 100%;
+    height: 38px;
+    border-radius: 10px;
+    background: #5f5f5f;
+    color: white;
+    padding: 0 12px;
+    margin-bottom: 12px;
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+/* Checkbox personalizado */
+.checkbox-personalizado {
+    position: relative;
+    width: 20px;
+    height: 20px;
+}
+
+.checkbox-personalizado input {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* Quadradinho */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 6px;
+    background: #3a3a3a;
+    border: 2px solid #777;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/* Quando estiver marcado */
+.checkbox-personalizado input:checked + .checkmark {
+    background: #c4b61c;
+    border-color: #c4b61c;
+}
+
+/* ✓ fica escondido quando não estiver marcado */
+.checkmark {
+    color: transparent;
+}
+
+/* ✓ aparece quando estiver marcado */
+.checkbox-personalizado input:checked + .checkmark {
+    color: white;
+}
+
+/* Campo Nome da pasta começa escondido */
+.campo-pasta {
+    display: none;
+}
+
+/* ==========================================
+   PASTAS DA GALERIA
+   ========================================== */
+
+.pastas-area {
+    display: none;
+    margin-bottom: 15px;
+}
+
+.pastas-area h3 {
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.pastas-container {
+    display: flex;
+    gap: 8px;
+    width: 100%;
+}
+
+.pasta-item {
+    width: 33.33%;
+    color: white;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 10px;
+}
+
+.pasta-quadrado {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background: #5f5f5f;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.pasta-quadrado i {
+    color: #c4b61c;
+    font-size: 30px;
+}
+
+.pasta-item span {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.imagem-pasta {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.pasta-quadrado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pasta-quadrado img {
+    display: block;
+    width: 80%;
+    height: 80%;
+    object-fit: cover;
+    border-radius: 6px;
+    margin: auto;
+}
+
+.foto-aberta {
+    position: relative;
+}
+
+.icone-ia {
+    position: absolute;
+    right: 25px;
+    bottom: 100px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    z-index: 20;
+}
+
+.icone-ia img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.chat-ia {
+    position: absolute;
+    right: 15px;
+    bottom: 85px;
+    width: 300px;
+    height: 380px;
+    background-color: #1c1c1c;
+    border-radius: 20px;
+    overflow: hidden;
+    z-index: 50;
+    display: none;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.chat-ia.aberto {
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-cabecalho {
+    height: 55px;
+    background-color: #2b2b2b;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.chat-cabecalho button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.chat-mensagens {
+    flex: 1;
+    padding: 15px;
+    overflow-y: auto;
+}
+
+.mensagem-ia {
+    background-color: #3a3a3a;
+    color: white;
+    padding: 10px 12px;
+    border-radius: 14px;
+    font-size: 12px;
+    line-height: 1.4;
+    max-width: 85%;
+}
+
+.mensagem-usuario {
+    background-color: #c4b61c;
+    color: white;
+    padding: 10px 12px;
+    border-radius: 14px;
+    font-size: 12px;
+    line-height: 1.4;
+    max-width: 85%;
+    margin-left: auto;
+    margin-top: 10px;
+}
+
+.chat-input-area {
+    display: flex;
+    gap: 8px;
+    padding: 10px;
+    background-color: #252525;
+}
+
+.chat-input-area input {
+    flex: 1;
+    border: none;
+    outline: none;
+    border-radius: 12px;
+    padding: 9px;
+    background-color: #3a3a3a;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 11px;
+}
+
+.chat-input-area button {
+    width: 38px;
+    height: 38px;
+    border: none;
+    border-radius: 50%;
+    background-color: #c4b61c;
+    color: white;
+    cursor: pointer;
 }

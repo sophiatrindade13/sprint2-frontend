@@ -3,20 +3,36 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  >
+
   <link
     rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  >
+
   <link rel="stylesheet" href="style.css">
+
   <title>JOVI Scan</title>
 </head>
 
 <body>
 
-  <main class="container">
-    <section class="phone">
+<main class="container">
+
+  <section class="phone">
+
+    <!-- ================================================= -->
+    <!-- TELA 1 - TELA INICIAL -->
+    <!-- ================================================= -->
+
+    <div class="tela ativa" id="tela-inicial">
 
       <header class="top-icons">
 
@@ -34,7 +50,7 @@
 
       </header>
 
-    <section class="camera-area">
+      <section class="camera-area">
 
         <img src="images/foto.jpg" alt="Preview câmera">
 
@@ -51,13 +67,13 @@
 
         </nav>
 
-    </section>
+      </section>
 
-        <div class="camera-screen">
-            <img src="scan-barcode-svgrepo-com.svg" class="scan-icon">
-        </div>
+      <div class="camera-screen">
+        <img src="scan-barcode-svgrepo-com.svg" class="scan-icon">
+      </div>
 
-    <section class="scan-mode">
+      <section class="scan-mode">
 
         <nav class="modes">
 
@@ -69,41 +85,693 @@
 
         </nav>
 
-    <section class="camera-controls">
+        <section class="camera-controls">
 
-          <a href="./index3.html" class="gallery-btn">
-             <img src="/images/lousa.jpeg" alt="">
+          <a href="#" class="gallery-btn" data-tela="galeria">
+            <img src="lousa.jpeg" alt="">
           </a>
 
-              <a href="./index2.html" class="capture-btn"></a>
+          <a href="#" class="capture-btn" data-tela="captura"></a>
 
-         <div class="rotate-btn">
+          <div class="rotate-btn">
             <i class="fa-solid fa-rotate"></i>
           </div>
 
-    </section>
+        </section>
 
-    </section>
+      </section>
 
-    <footer class="bottom-menu">
+      <footer class="bottom-menu">
 
         <a href="#">
-            <i class="fa-solid fa-bars"></i>
-         </a>
-
-         <a href="#" class="active-bottom">
-             <div class="camera-dot"></div>
+          <i class="fa-solid fa-bars"></i>
         </a>
 
-         <a href="#">
-             <i class="fa-solid fa-chevron-left"></i>
-         </a>
+        <a href="#" class="active-bottom">
+          <div class="camera-dot"></div>
+        </a>
 
-    </footer>
+        <a href="#">
+          <i class="fa-solid fa-chevron-left"></i>
+        </a>
 
-    </section>
+      </footer>
 
-  </main>
+    </div>
+
+
+    <!-- ================================================= -->
+    <!-- TELA 2 - APÓS PRIMEIRA CAPTURA -->
+    <!-- ================================================= -->
+
+    <div class="tela" id="tela-captura">
+
+      <header class="top-icons">
+
+        <a href="#"><i class="fa-solid fa-bolt"></i></a>
+        <a href="#"><i class="fa-solid fa-wand-magic-sparkles"></i></a>
+        <a href="#"><i class="fa-regular fa-clock"></i></a>
+        <a href="#"><i class="fa-solid fa-expand"></i></a>
+        <a href="#"><i class="fa-solid fa-layer-group"></i></a>
+        <a href="#"><i class="fa-solid fa-gear"></i></a>
+
+      </header>
+
+      <section class="camera-areab">
+
+        <img src="lousa.jpeg" alt="Preview câmera">
+
+        <div class="overlay"></div>
+
+        <div class="scan-corners corner-top-left"></div>
+        <div class="scan-corners corner-top-right"></div>
+        <div class="scan-corners corner-bottom-left"></div>
+        <div class="scan-corners corner-bottom-right"></div>
+
+        <nav class="zoom-controls">
+
+          <a href="#">0.6</a>
+          <a href="#" class="active-zoom">1x</a>
+          <a href="#">2</a>
+
+        </nav>
+
+      </section>
+
+      <div class="camera-screen">
+        <img src="scan-barcode-svgrepo-com.svg" class="scan-icon">
+      </div>
+
+      <section class="scan-mode">
+
+        <nav class="modes">
+
+          <a href="#">RETRATO</a>
+          <a href="#">FOTO</a>
+          <a href="#" class="active-mode">SCAN</a>
+          <a href="#">VÍDEO</a>
+          <a href="#">MAIS</a>
+
+        </nav>
+
+        <section class="camera-controls">
+
+          <a href="#" class="gallery-btn" data-tela="galeria">
+            <img src="lousa.jpeg" alt="">
+          </a>
+
+          <a href="#" class="capture-btn" data-tela="escaneando"></a>
+
+          <div class="rotate-btn">
+            <i class="fa-solid fa-rotate"></i>
+          </div>
+
+        </section>
+
+      </section>
+
+      <footer class="bottom-menu">
+
+        <a href="#">
+          <i class="fa-solid fa-bars"></i>
+        </a>
+
+        <a href="#" class="active-bottom">
+          <div class="camera-dot"></div>
+        </a>
+
+        <a href="#">
+          <i class="fa-solid fa-chevron-left"></i>
+        </a>
+
+      </footer>
+
+    </div>
+
+
+    <!-- ================================================= -->
+    <!-- TELA 3 - GALERIA -->
+    <!-- ================================================= -->
+
+    <div class="tela" id="tela-galeria">
+
+      <section class="camera-area2">
+
+        <h2 class="titulo-galeria">
+           Galeria
+       </h2>
+
+    <div class="pastas-area" id="pastas-area">
+  
+        <h3>Pastas</h3>
+
+    <div class="pastas-container">
+
+      <div class="pasta-item">
+          <div class="pasta-quadrado">
+            <a href="#" data-tela="foto">
+             <img src="WhatsApp Image 2026-05-15 at 16.51.17.jpeg" alt="Foto da pasta">
+            </a>
+          </div>
+       <span id="nome-pasta-galeria">Pasta 1</span>
+      </div>
+
+      <div class="pasta-item">
+          <div class="pasta-quadrado">
+           <i class="fa-solid fa-folder"></i>
+          </div>
+        <span>Pasta 2</span>
+      </div>
+
+        <div class="pasta-item">
+          <div class="pasta-quadrado">
+            <i class="fa-solid fa-folder"></i>
+          </div>
+         <span>Pasta 3</span>
+        </div>
+
+       </div>
+
+     </div>
+
+  <section class="gallery-grid">
+
+          <div class="gallery-item escuro1"></div>
+          <div class="gallery-item escuro2"></div>
+          <div class="gallery-item escuro3"></div>
+          <div class="gallery-item escuro1"></div>
+          <div class="gallery-item escuro2"></div>
+
+          <div class="gallery-item escuro3"></div>
+          <div class="gallery-item escuro1"></div>
+          <div class="gallery-item escuro2"></div>
+          <div class="gallery-item escuro3"></div>
+          <div class="gallery-item escuro1"></div>
+
+          <div class="gallery-item escuro2"></div>
+          <div class="gallery-item escuro3"></div>
+          <div class="gallery-item escuro1"></div>
+          <div class="gallery-item escuro2"></div>
+          <div class="gallery-item escuro3"></div>
+
+          <div class="gallery-item escuro1"></div>
+          <div class="gallery-item escuro2"></div>
+          <div class="gallery-item escuro3"></div>
+          <div class="gallery-item escuro1"></div>
+
+          <div class="gallery-item escuro1"></div>
+          <div class="gallery-item escuro2"></div>
+          <div class="gallery-item escuro3"></div>
+          <div class="gallery-item escuro1"></div>
+          <div class="gallery-item escuro2"></div>
+
+          <div class="gallery-item escuro3"></div>
+          <div class="gallery-item escuro1"></div>
+          <div class="gallery-item escuro2"></div>
+          <div class="gallery-item escuro3"></div>
+          <div class="gallery-item escuro1"></div>
+
+          <div class="gallery-item escuro2"></div>
+          <div class="gallery-item escuro3"></div>
+          <div class="gallery-item escuro1"></div>
+          <div class="gallery-item escuro2"></div>
+          <div class="gallery-item escuro3"></div>
+
+          <div class="gallery-item escuro1"></div>
+          <div class="gallery-item escuro2"></div>
+          <div class="gallery-item escuro3"></div>
+          <div class="gallery-item escuro1"></div>
+
+          <div class="gallery-item escuro3"></div>
+          <div class="gallery-item escuro1"></div>
+          <div class="gallery-item escuro2"></div>
+          <div class="gallery-item escuro3"></div>
+          <div class="gallery-item escuro1"></div>
+
+          <div class="gallery-item escuro2"></div>
+
+          <a href="#" class="gallery-item destaque" data-tela="foto">
+
+            <img src="lousa.jpeg" alt="">
+
+            <img
+              src="scan-barcode-svgrepo-com.svg"
+              class="scan-icon2"
+            >
+
+          </a>
+
+        </section>
+
+      </section>
+
+      <footer class="bottom-menu2">
+
+        <a href="#" class="menu2">
+          <i class="fa-solid fa-bars"></i>
+        </a>
+
+        <a href="#" class="bolinha">
+          <div class="camera-dot2"></div>
+        </a>
+
+        <a href="#" class="voltar2" data-tela="inicial">
+          <i class="fa-solid fa-chevron-left"></i>
+        </a>
+
+      </footer>
+
+    </div>
+
+
+    <!-- ================================================= -->
+    <!-- TELA 4 - ESCANEANDO -->
+    <!-- ================================================= -->
+
+    <div class="tela" id="tela-escaneando">
+
+      <header class="top-icons">
+
+        <a href="#"><i class="fa-solid fa-bolt"></i></a>
+        <a href="#"><i class="fa-solid fa-wand-magic-sparkles"></i></a>
+        <a href="#"><i class="fa-regular fa-clock"></i></a>
+        <a href="#"><i class="fa-solid fa-expand"></i></a>
+        <a href="#"><i class="fa-solid fa-layer-group"></i></a>
+        <a href="#"><i class="fa-solid fa-gear"></i></a>
+
+      </header>
+
+      <section class="camera-areab">
+
+        <img src="lousa.jpeg" alt="Preview câmera">
+
+        <div class="overlay"></div>
+
+        <div class="scan-lines">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <div class="scan-lines1">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <div class="scan-lines2">
+          <span></span>
+          <span></span>
+        </div>
+
+        <div class="scan-lines3">
+          <span></span>
+        </div>
+
+        <div class="scan-corners corner-top-left"></div>
+        <div class="scan-corners corner-top-right"></div>
+        <div class="scan-corners corner-bottom-left"></div>
+        <div class="scan-corners corner-bottom-right"></div>
+
+        <a href="#" class="scan-message" data-tela="alarme">
+
+          <i class="fa-solid fa-sparkles"></i>
+
+          <p>Habilitar foco</p>
+
+        </a>
+
+      </section>
+
+      <div class="camera-screen">
+        <img src="scan-barcode-svgrepo-com.svg" class="scan-icon">
+      </div>
+
+      <section class="scan-mode">
+
+        <nav class="modes">
+
+          <a href="#">RETRATO</a>
+          <a href="#">FOTO</a>
+          <a href="#" class="active-mode">SCAN</a>
+          <a href="#">VÍDEO</a>
+          <a href="#">MAIS</a>
+
+        </nav>
+
+        <section class="camera-controls">
+
+          <a href="#" class="gallery-btn" data-tela="galeria">
+            <img src="lousa.jpeg" alt="">
+          </a>
+
+          <a href="#" class="capture-btn" data-tela="escaneando"></a>
+
+          <div class="rotate-btn">
+            <i class="fa-solid fa-rotate"></i>
+          </div>
+
+        </section>
+
+      </section>
+
+      <footer class="bottom-menu">
+
+        <a href="#">
+          <i class="fa-solid fa-bars"></i>
+        </a>
+
+        <a href="#" class="active-bottom">
+          <div class="camera-dot"></div>
+        </a>
+
+        <a href="#">
+          <i class="fa-solid fa-chevron-left"></i>
+        </a>
+
+      </footer>
+
+    </div>
+
+
+    <!-- ================================================= -->
+    <!-- TELA 5 - CRIAR ALARME -->
+    <!-- ================================================= -->
+
+    <div class="tela" id="tela-alarme">
+
+      <header class="top-icons">
+
+        <a href="#"><i class="fa-solid fa-bolt"></i></a>
+        <a href="#"><i class="fa-solid fa-wand-magic-sparkles"></i></a>
+        <a href="#"><i class="fa-regular fa-clock"></i></a>
+        <a href="#"><i class="fa-solid fa-expand"></i></a>
+        <a href="#"><i class="fa-solid fa-layer-group"></i></a>
+        <a href="#"><i class="fa-solid fa-gear"></i></a>
+
+      </header>
+
+      <section class="camera-areab">
+
+        <img src="lousa.jpeg" alt="Preview câmera">
+
+        <div class="overlay"></div>
+
+        <div class="scan-success">
+
+          <i class="fa-solid fa-circle-check"></i>
+
+          <p>Escaneado com sucesso</p>
+
+        </div>
+
+        <div class="scan-corners corner-top-left"></div>
+        <div class="scan-corners corner-top-right"></div>
+        <div class="scan-corners corner-bottom-left"></div>
+        <div class="scan-corners corner-bottom-right"></div>
+
+      </section>
+
+      <div class="caixa-alarme">
+
+        <input type="time" class="hora-input">
+
+        <select class="campo-input">
+
+          <option>Não repetir</option>
+          <option>Todos os dias</option>
+          <option>Segunda a sexta</option>
+
+        </select>
+
+        <input
+          type="text"
+          placeholder="Nome do alarme"
+          class="campo-input"
+        >
+
+        <select class="campo-input">
+
+          <option>Sem som</option>
+          <option>Radar</option>
+          <option>Brisa</option>
+          <option>Digital</option>
+
+        </select>
+
+       <label class="checkbox-pasta">
+         <span>Criar pasta</span>
+
+          <span class="checkbox-personalizado">
+           <input type="checkbox" id="criar-pasta">
+            <span class="checkmark">✓</span>
+          </span>
+        </label>
+
+        <input
+          type="text"
+          id="nome-pasta"
+          class="campo-input campo-pasta"
+         placeholder="Nome da pasta">
+
+        <div class="botoes-alarme">
+
+          <button
+            type="button"
+            class="btn-cancelar"
+            data-tela="inicial"
+          >
+            Cancelar
+          </button>
+
+          <button
+            type="button"
+            class="btn-criar"
+            data-tela="sucesso"
+          >
+            Criar
+          </button>
+
+        </div>
+
+      </div>
+
+      <section class="scan-mode">
+
+        <nav class="modes">
+
+          <a href="#">RETRATO</a>
+          <a href="#">FOTO</a>
+          <a href="#" class="active-mode">SCAN</a>
+          <a href="#">VÍDEO</a>
+          <a href="#">MAIS</a>
+
+        </nav>
+
+        <section class="camera-controls">
+
+          <a href="#" class="gallery-btn" data-tela="galeria">
+            <img src="lousa.jpeg" alt="">
+          </a>
+
+          <a href="#" class="capture-btn" data-tela="escaneando"></a>
+
+          <div class="rotate-btn">
+            <i class="fa-solid fa-rotate"></i>
+          </div>
+
+        </section>
+
+      </section>
+
+      <footer class="bottom-menu">
+
+        <a href="#">
+          <i class="fa-solid fa-bars"></i>
+        </a>
+
+        <a href="#" class="active-bottom">
+          <div class="camera-dot"></div>
+        </a>
+
+        <a href="#">
+          <i class="fa-solid fa-chevron-left"></i>
+        </a>
+
+      </footer>
+
+    </div>
+
+
+    <!-- ================================================= -->
+    <!-- TELA 6 - ALARME CRIADO -->
+    <!-- ================================================= -->
+
+    <div class="tela" id="tela-sucesso">
+
+      <header class="top-icons">
+
+        <a href="#"><i class="fa-solid fa-bolt"></i></a>
+        <a href="#"><i class="fa-solid fa-wand-magic-sparkles"></i></a>
+        <a href="#"><i class="fa-regular fa-clock"></i></a>
+        <a href="#"><i class="fa-solid fa-expand"></i></a>
+        <a href="#"><i class="fa-solid fa-layer-group"></i></a>
+        <a href="#"><i class="fa-solid fa-gear"></i></a>
+
+      </header>
+
+      <section class="camera-areab">
+
+        <img src="lousa.jpeg" alt="Preview câmera">
+
+        <div class="overlay"></div>
+
+        <div class="scan-corners corner-top-left"></div>
+        <div class="scan-corners corner-top-right"></div>
+        <div class="scan-corners corner-bottom-left"></div>
+        <div class="scan-corners corner-bottom-right"></div>
+
+        <div class="modal">
+
+          <p>Alarme criado com sucesso!</p>
+
+          <button
+            type="button"
+            data-tela="inicial"
+          >
+            Cancelar
+          </button>
+
+        </div>
+
+      </section>
+
+      <section class="scan-mode">
+
+        <nav class="modes">
+
+          <a href="#">RETRATO</a>
+          <a href="#">FOTO</a>
+          <a href="#" class="active-mode">SCAN</a>
+          <a href="#">VÍDEO</a>
+          <a href="#">MAIS</a>
+
+        </nav>
+
+        <section class="camera-controls">
+
+          <a href="#" class="gallery-btn" data-tela="galeria">
+            <img src="lousa.jpeg" alt="">
+          </a>
+
+          <a href="#" class="capture-btn" data-tela="escaneando"></a>
+
+          <div class="rotate-btn">
+            <i class="fa-solid fa-rotate"></i>
+          </div>
+
+        </section>
+
+      </section>
+
+      <footer class="bottom-menu">
+
+        <a href="#">
+          <i class="fa-solid fa-bars"></i>
+        </a>
+
+        <a href="#" class="active-bottom">
+          <div class="camera-dot"></div>
+        </a>
+
+        <a href="#">
+          <i class="fa-solid fa-chevron-left"></i>
+        </a>
+
+      </footer>
+
+    </div>
+
+
+    <!-- ================================================= -->
+    <!-- TELA 7 - FOTO ABERTA -->
+    <!-- ================================================= -->
+
+    <div class="tela" id="tela-foto">
+
+      <section class="camera-area foto-aberta">
+
+        <h2 class="titulo-galeria">
+          Galeria
+        </h2>
+
+        <img
+          src="WhatsApp Image 2026-05-15 at 16.51.17.jpeg"
+          class="foto-grande"
+        >
+
+          <div class="icone-ia">
+             <img src="./brilhante.png" alt="IA">
+          </div>
+
+          <div class="chat-ia" id="chat-ia">
+
+             <div class="chat-cabecalho">
+                <span>JOVI IA</span>
+
+               <button type="button" id="fechar-chat">×</button>
+             </div>
+
+             <div class="chat-mensagens">
+
+               <div class="mensagem-ia">
+                 Olá! 👋 Analisei o conteúdo escaneado. Como posso te ajudar?
+               </div>
+
+             </div>
+
+           <div class="chat-input-area">
+
+              <input
+                 type="text"
+                  id="pergunta-ia"
+                  placeholder="Digite sua pergunta..."
+               >
+
+              <button type="button" id="enviar-pergunta">
+                 <i class="fa-solid fa-paper-plane"></i>
+               </button>
+
+            </div>
+
+          </div>
+
+      </section>
+
+      <footer class="bottom-menu2">
+
+        <a href="#" class="menu2">
+          <i class="fa-solid fa-bars"></i>
+        </a>
+
+        <a href="#" class="bolinha">
+          <div class="camera-dot"></div>
+        </a>
+
+        <a href="#" class="voltar2" data-tela="galeria">
+          <i class="fa-solid fa-chevron-left"></i>
+        </a>
+
+      </footer>
+
+    </div>
+
+  </section>
+
+</main>
+
+<script src="script.js"></script>
 
 </body>
 </html>
